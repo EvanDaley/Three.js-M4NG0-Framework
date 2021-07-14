@@ -1,12 +1,12 @@
 /* 
   LoadingScene
-  Proceed after assets have loaded or MIN_DURATION has passed, whichever comes last
+  Proceed after assets have loaded or MIN_DURATION_SECONDS has passed, whichever comes last
 */
 
 import { Color } from "three"
 import { M4Scene } from "../M4NG0/Objects/M4Scene"
 
-const MIN_DURATION = 3.7
+const MIN_DURATION_SECONDS = 3.7
 
 class LoadingScene extends M4Scene {
   setDefaults() {
@@ -21,7 +21,7 @@ class LoadingScene extends M4Scene {
         this.enoughTimeHasElapsed = true
         this.proceedWhenReady()
       },
-      MIN_DURATION * 1000
+      MIN_DURATION_SECONDS * 1000
     )
   }
 
